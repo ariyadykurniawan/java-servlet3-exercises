@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<b>Add student</b><br/>
+<form action="StudentServlet" method="POST">
+	<label>Name : </label> <input name="name"/>
+	<input type="submit" value="add"/>
+</form>
+<% String hello = (String) session.getAttribute("listStudent");  %>
+	<label>hello</label>
+		<button>remove</button>
+</body>
+</html>

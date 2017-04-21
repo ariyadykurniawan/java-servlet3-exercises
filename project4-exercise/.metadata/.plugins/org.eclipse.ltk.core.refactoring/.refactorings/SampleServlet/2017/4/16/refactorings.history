@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move &apos;gson-2.6.2.jar&apos; to &apos;lib&apos;" description="Move &apos;gson-2.6.2.jar&apos; to &apos;lib&apos;" destination="WebContent/WEB-INF/lib" element1="WebContent/gson-2.6.2.jar" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1492740517389" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SampleServlet/WebContent/Inputform.html&apos; to &apos;Inputform.jsp&apos;" description="Rename resource &apos;Inputform.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/Inputform.html" name="Inputform.jsp" stamp="1492742176499" updateReferences="true"/>
+</session>

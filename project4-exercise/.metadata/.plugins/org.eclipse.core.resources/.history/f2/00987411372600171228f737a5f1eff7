@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<b>Add student</b><br/>
+<form action="Servlet">
+	<label>Name : </label> <input name="Name"/>
+	<input type="submit" />
+</form>
+</body>
+</html>

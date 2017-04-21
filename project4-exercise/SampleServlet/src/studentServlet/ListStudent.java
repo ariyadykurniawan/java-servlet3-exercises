@@ -1,0 +1,21 @@
+package studentServlet;
+
+import java.util.List;
+
+public class ListStudent {
+	List<Student> data;
+	
+	public ListStudent(List<Student> student) {
+		super();
+		this.data = student;
+	}
+
+	public List<Student> getStudent() {
+		return data;
+	}
+
+	public void setStudent(List<Student> student) {
+		this.data = student;
+	}
+	
+}

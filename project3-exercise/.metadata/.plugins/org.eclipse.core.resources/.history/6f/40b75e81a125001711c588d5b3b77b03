@@ -1,0 +1,49 @@
+package student;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+
+/**
+ * Servlet implementation class Servlet
+ */
+@WebServlet("/Servlet")
+public class Servlet extends HttpServlet {
+	List<Student> student = new ArrayList<Student>();
+	Map<String, Long> map = new HashMap<String, Long>();
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		HashMap<String, String> res = new HashMap<String, String>();
+		
+		
+		this.student.add(new Student("aaa",20));
+		this.student.add(new Student("bbb",50));
+		
+		
+		Gson gson = new Gson();
+		String jsonString = gson.toJson(student);
+		res.put("data", jsonString);
+		res.put("message", "Hello From Server");
+		PrintWriter writer = response.getWriter();
+		writer.print(jsonString);
+	}
+
+}

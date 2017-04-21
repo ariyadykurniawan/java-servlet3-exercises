@@ -1,0 +1,54 @@
+package studentServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+
+/**
+ * StudentServlet implementation class Servlet
+ */
+@WebServlet("/StudentServlet")
+@MultipartConfig
+public class StudentServlet extends HttpServlet {
+	List<Student> student = new ArrayList<Student>();
+
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String id = request.getParameter("id");
+		student = student.stream().filter(s -> s.getId() != Integer.parseInt(id)).collect(Collectors.toList());
+		
+		request.getSession().setAttribute("listStudent", student);
+		request.getRequestDispatcher("/nameList.jsp").forward(request, response);
+	}
+	
+	int id = 0; 
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		 
+		String name = request.getParameter("name");
+		student.add(new Student(name,id));
+		
+		request.getSession().setAttribute("listStudent", student);
+		request.getRequestDispatcher("/nameList.jsp").forward(request, response);
+		
+		id++;
+	}
+
+}

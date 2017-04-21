@@ -1,0 +1,10 @@
+package username;
+
+import javax.annotation.ManagedBean;
+import javax.faces.bean.SessionScoped;
+@SessionScoped
+@ManagedBean
+public class NameWrapper {
+	
+	private strin name;
+}

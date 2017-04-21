@@ -1,0 +1,33 @@
+package book;
+
+import java.io.Serializable;
+
+public class Book implements Serializable{
+	private static final long serialVersionUID = 1L;
+    
+    private Long id;
+    private String isbn;
+    private String title;
+    private String author;
+    private String publisher;
+    private int price;
+    
+    public Book(){}
+    public Book(Long id, String isbn, String title, String author, String publisher, int price){
+    	this.id = id;
+    	this.isbn = isbn;
+    	this.title =title;
+    	this.author = author;
+    	this.publisher = publisher;
+    	this.price = price;
+    }
+    
+    @Override
+    public Book clone(){
+    	return new Book(id, isbn, title, author, publisher, price);
+    }
+    
+    public void restore(Book book){
+    	
+    }
+}

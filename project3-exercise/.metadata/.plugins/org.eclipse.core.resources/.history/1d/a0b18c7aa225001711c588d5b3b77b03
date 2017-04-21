@@ -1,0 +1,33 @@
+package student;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListStudent {
+	List<Student> student;
+	private String message;
+	
+	public ListStudent(List<Student> student, String message) {
+		super();
+		this.student = student;
+		this.message = message;
+	}
+
+	public List<Student> getStudent() {
+		return student;
+	}
+
+	public void setStudent(List<Student> student) {
+		this.student = student;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	
+}

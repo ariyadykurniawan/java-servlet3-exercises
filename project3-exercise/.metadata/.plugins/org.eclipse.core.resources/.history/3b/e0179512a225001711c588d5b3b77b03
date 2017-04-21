@@ -1,0 +1,13 @@
+package student;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListStudent {
+	List<Student> student = new ArrayList<Student>();
+	private String message = "Hello From Server";
+	
+	public ListStudent(){
+		
+	}
+}
